@@ -1,0 +1,155 @@
+:root {
+    --light-blue-300: #E9ECF8;
+
+    --dark-blue-100: #609ED4;
+    --dark-blue-200: #356EA9;
+    --dark-blue-300: #0A3871;
+    --dark-blue-400: #072B61;
+    --dark-blue-500: #052051;
+
+    --dark-gray-400: #67808E;
+    --dark-gray-500: #343A40;
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--light-blue-300);
+}
+img {
+    max-width: 100%;
+}
+
+/*CONTENEDOR PRINCIPAL*/
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    gap: 15px;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+}
+.main__textarea {
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 550px;
+    max-height: 550px;
+
+    padding: 10px;
+    border: none;
+    overflow: auto;
+    outline: none;
+
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+
+    background-color: var(--light-blue-300);
+
+    font-size: 25px;
+    color: var(--dark-blue-300);
+}
+
+.main__warning {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.main__warning p {
+    color: var(--dark-gray-400);
+}
+
+.main__buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    padding-top: 25px;
+}
+.main__buttons input {
+    width: 350px;
+    padding: 15px 0;
+    border-radius: 20px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.main__buttons--encriptar {
+    border: none;
+    background-color: var(--dark-blue-500);
+    color: var(--light-blue-300);
+}
+.main__buttons--desencriptar {
+    border-width: 1px;
+    border-color:var(--dark-blue-500);
+    background-color: var(--light-blue-300);
+    color: var(--dark-blue-500);
+}
+.message {
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 20px;
+    margin-top: 25px;
+    padding: 50px 0 15px;
+    text-align: center;
+}
+.salida {
+    font-size: 25px;
+}
+.message {
+    color: var(--dark-gray-500);
+    font-size: 18px;
+    font-weight: 500;
+}
+.message span {
+    color: var(--dark-gray-500);
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.message input {
+    width: 150px;
+    margin-top: 25px;
+    border-width: 1px;
+    border-color: var(--dark-gray-400);
+    border-radius: 15px;
+    padding: 15px;
+    background-color: #ffffff;
+    visibility: hidden;
+    cursor: pointer;
+}
+@media (min-width: 600px) {
+    .main__buttons {
+        flex-direction: row;
+    }
+}
+@media (min-width: 1080px) {
+    .main {
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+    }
+    .main .text {
+        width: 60%;
+    }
+    .main__warning {
+        width: 40%;
+    }
+    .message {
+        min-width: 25%;
+        max-width: 25%;
+    }
+    .message__img {
+        content: url(../multimedia/Muñeco.png);
+        width: 100%;
+    }
+}

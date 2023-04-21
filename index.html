@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <title>Encriptador</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <h1>
+                <a href="./index.html">
+                    <img src="./multimedia/logo.png" alt="logo">
+                </a>
+            </h1>
+        </div>
+        <div class="main">
+            <div class="text">
+                <textarea id="text_ingresado" class="main__textarea" cols="30" rows="10" placeholder="Ingrese el texto aquí"></textarea>
+
+                <div class="main__warning">
+                    <img src="./multimedia/signo-de-exclamacion.png" alt="signo-de-exclamacion">
+                    <p>Solo ingresar letras minusculas y sin acentos</p>
+                </div>
+                <div class="main__buttons">
+                    <input id="btn_encriptar" class="main__buttons--encriptar" type="button" value="Encriptar">
+                    <input id="btn_desencriptar"  class="main__buttons--desencriptar" type="button" value="Desencriptar">
+                </div>
+            </div>
+            <div id="ml" class="message">
+                <div class="salida"></div>
+                <div class="contenido">
+                    <div class="message__img"></div>
+                    <div class="message__text">
+                        <span>Ningún mensaje fue <br> encontrado</span>
+                        <br>
+                        <br>
+                        Porfavor ingresa el texto que deceas <br> Encriptar o Desencriptar
+                    </div>
+                </div>
+                <input id="btn_copiar" type="button" value="Copiar">
+            </div>
+        </div>
+        
+    </div>
+
+    <script src="./js/index.js"></script>
+</body>
+</html>
